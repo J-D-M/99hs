@@ -1,5 +1,4 @@
-module RandPerm (randPerm) where
+module RandPerm (rPerm) where
 import System.Random
 
-randPerm :: [a] -> IO [a]
-randPerm ls = 
+rPerm :: [a] -> IO[a]
