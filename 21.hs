@@ -1,5 +1,7 @@
-insert_at :: Eq a => a -> [a] -> Int -> [a]
-insert_at e ls@(x:xs) i
-  | ls == []   =  [e]
-  | i > 1      =  x : insert_at e xs (i - 1)
-  | otherwise  =  e:ls
+module InsertAt where
+
+insertAt :: Eq a => a -> [a] -> Int -> [a]
+insertAt e ls@(x:xs) i
+  | null ls   = [e]
+  | i > 1     = x : insertAt e xs (i - 1)
+  | otherwise = e : ls
